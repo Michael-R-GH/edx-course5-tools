@@ -6,3 +6,9 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 options(digits = 3)
+library(dslabs)
+data("heights")
+head(heights)
+heights%>%
+  ggplot()+
+  geom_boxplot(aes(sex, height, color=sex))
