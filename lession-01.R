@@ -12,3 +12,12 @@ head(heights)
 heights%>%
   ggplot()+
   geom_boxplot(aes(sex, height, color=sex))
+x<-seq(0,10, length=50)
+as.integer(x)
+x<-c(0:10, 50, trim=0.1)
+x
+mean(x)
+a<-c(0:10, 50)
+a
+mean(a)
+mean(a, trim=0.1)
