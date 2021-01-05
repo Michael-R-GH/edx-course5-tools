@@ -11,10 +11,6 @@ page](https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state).
 
 We are going to use the following library:
 
-``` r
-library(tidyverse)
-```
-
     ## -- Attaching packages ---------------------------------------------------------------------------------------- tidyverse 1.3.0 --
 
     ## v ggplot2 3.2.1     v purrr   0.3.3
@@ -32,20 +28,9 @@ library(tidyverse)
 
 and load the data we already wrangled:
 
-``` r
-load("murders/projects/rda/murders.rda")
-```
-
 ## Murder rate by state
 
 We note that large state to state variability by generating a barplot
 showing the murder rate by state:
-
-``` r
-murders%>%mutate(abb=reorder(abb, rate))%>%
-  ggplot(aes(abb, rate))+
-  geom_bar(width=0.5, stat="identity", color="black")+
-  coord_flip()
-```
 
 ![](report-rmarkdown_files/figure-gfm/murder-rate-by-state-1.png)<!-- -->
